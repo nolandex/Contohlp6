@@ -3,8 +3,8 @@
     "siteName": "Sidoarjo Web Kreasi",
     "siteUrl": "https://website-anda.com/",
     "metadata": {
-      "title": "Jasa Pembuatan Website & Aplikasi Profesional di Sidoarjo",
-      "description": "Kami membantu UMKM dan Perusahaan di Sidoarjo untuk go digital dengan layanan pembuatan website dan aplikasi yang meningkatkan penjualan dan brand Anda."
+      "title": "Jasa Web Profesional Sidoarjo - Next.js & Tailwind",
+      "description": "Jasa web profesional di Sidoarjo. Kami hadirkan solusi digital untuk kesuksesan dan efisiensi bisnis Anda."
     },
     "language": "id-id",
     "locale": "id-ID",
@@ -13,23 +13,21 @@
   "menuItems": [
     { "text": "Layanan", "url": "#features" },
     { "text": "Harga", "url": "#pricing" },
-    { "text": "Testimoni", "url": "#testimonials" },
-    { "text": "FAQ", "url": "#faq" }
+    { "text": "Testimoni", "url": "#testimonials" }
   ],
   "heroDetails": {
-    "heading": "Bangun Kehadiran Digital Anda dengan Website Profesional",
-    "subheading": "Layanan pembuatan website dan aplikasi custom di Sidoarjo untuk UMKM dan Perusahaan. Desain modern, performa cepat, dan siap meningkatkan penjualan Anda.",
-    "centerImageSrc": "/images/hero-mockup-website.webp"
+    "heading": "Solusi Website Cerdas, Aman, & Modern",
+    "subheading": "Dari desain elegan hingga performa cepat, kami berikan Anda kendali penuh atas citra digital bisnis Anda di Sidoarjo.",
+    "centerImageSrc": "/images/hero-mockup.webp"
   },
   "tiers": [
     {
       "name": "Paket UKM",
       "price": "1.5 jt",
       "features": [
-        "Desain dari Template Pilihan", 
+        "Desain dari Template", 
         "Hingga 5 Halaman", 
-        "SEO Dasar", 
-        "Gratis Domain & Hosting 1 Tahun", 
+        "Setup SEO Dasar", 
         "Dukungan Email"
       ]
     },
@@ -40,97 +38,96 @@
         "Desain Custom Profesional", 
         "Hingga 15 Halaman", 
         "Integrasi Media Sosial",
-        "SEO Lanjutan & Analitik",
-        "CMS (WordPress/Lainnya)",
-        "Dukungan Prioritas"
+        "Dukungan Prioritas",
+        "Analitik Pengunjung"
       ]
     },
     {
       "name": "Paket Enterprise",
       "price": "Custom",
       "features": [
-        "Desain & Fitur Sesuai Kebutuhan", 
-        "Halaman Tidak Terbatas", 
-        "Pengembangan Aplikasi Web/Mobile", 
-        "Integrasi Sistem/API",
-        "Dukungan 24/7 & Maintenance",
-        "Pelatihan Penggunaan"
+        "Solusi Sesuai Kebutuhan", 
+        "Halaman Tanpa Batas", 
+        "Penyimpanan Tanpa Batas", 
+        "Dukungan Penuh 24/7",
+        "Pengembangan Fitur Custom",
+        "Pelatihan Tim Anda"
       ]
     }
   ],
   "benefits": [
     {
-      "title": "Desain Modern & Responsif",
-      "description": "Setiap website yang kami buat memiliki tampilan modern dan berfungsi sempurna di semua perangkat, dari desktop hingga smartphone, untuk menjangkau semua pelanggan Anda.",
+      "title": "Strategi Digital & Pertumbuhan",
+      "description": "Kami tidak hanya membangun website, kami merancang strategi agar bisnis Anda terus tumbuh dan menjangkau target pasar.",
       "bullets": [
-        { "title": "Tampilan Profesional", "description": "Meningkatkan citra dan kepercayaan brand Anda.", "icon": "FiLayout" },
-        { "title": "Mobile-Friendly", "description": "Pengalaman pengguna yang optimal di perangkat seluler.", "icon": "FiSmartphone" },
-        { "title": "Navigasi Intuitif", "description": "Pengunjung mudah menemukan informasi yang mereka cari.", "icon": "FiCompass" }
+        { "title": "Analisa Pasar", "description": "Memetakan data dan tren untuk keputusan strategis.", "icon": "FiBarChart2" },
+        { "title": "Tujuan Bisnis Jelas", "description": "Fitur yang dirancang untuk mencapai target Anda.", "icon": "FiTarget" },
+        { "title": "Tren Pertumbuhan", "description": "Mengikuti perkembangan digital untuk keunggulan.", "icon": "FiTrendingUp" }
       ],
-      "imageSrc": "/images/mockup-responsive.webp"
+      "imageSrc": "/images/mockup-1.webp"
     },
     {
-      "title": "Performa Cepat & SEO-Friendly",
-      "description": "Kami membangun website dengan teknologi terkini untuk memastikan waktu muat yang cepat dan struktur yang disukai mesin pencari seperti Google.",
+      "title": "Solusi E-Commerce & Bisnis",
+      "description": "Ubah pengunjung menjadi pelanggan dengan platform toko online yang andal dan portofolio yang memukau.",
       "bullets": [
-        { "title": "Loading Cepat", "description": "Mengurangi rasio pentalan dan disukai pengunjung.", "icon": "FiZap" },
-        { "title": "Struktur SEO", "description": "Membantu website Anda mudah ditemukan di Google.", "icon": "FiSearch" },
-        { "title": "Kode Bersih", "description": "Fondasi yang kuat untuk skalabilitas dan maintenance.", "icon": "FiCode" }
+        { "title": "Tingkatkan Penjualan", "description": "Mulai dari Rp 10.000 atau sesuai kebutuhan Anda.", "icon": "FiDollarSign" },
+        { "title": "Portofolio Profesional", "description": "Tampilkan karya terbaik Anda dengan desain elegan.", "icon": "FiBriefcase" },
+        { "title": "Laporan & Analitik", "description": "Pantau performa bisnis dengan data yang mudah dibaca.", "icon": "FiPieChart" }
       ],
-      "imageSrc": "/images/mockup-performance.webp"
+      "imageSrc": "/images/mockup-2.webp"
     },
     {
-      "title": "Mudah Dikelola & Dukungan Penuh",
-      "description": "Anda mendapatkan kontrol penuh atas konten website Anda melalui CMS yang mudah digunakan, dengan dukungan teknis dari tim kami.",
+      "title": "Keamanan & Kepercayaan",
+      "description": "Website Anda kami lindungi dengan standar keamanan modern untuk menjaga data dan kepercayaan pelanggan.",
       "bullets": [
-        { "title": "CMS User-Friendly", "description": "Update konten, gambar, dan berita secara mandiri.", "icon": "FiEdit3" },
-        { "title": "Dukungan Teknis", "description": "Kami siap membantu jika Anda mengalami kendala teknis.", "icon": "FiHelpCircle" },
-        { "title": "Pelatihan Penggunaan", "description": "Panduan lengkap agar Anda mahir mengelola website.", "icon": "FiBookOpen" }
+        { "title": "Enkripsi SSL", "description": "Informasi pengunjung aman dengan enkripsi standar.", "icon": "FiLock" },
+        { "title": "Login Pengguna Aman", "description": "Sistem login yang aman untuk admin dan pengguna.", "icon": "FiUser" },
+        { "title": "Proteksi dari Ancaman", "description": "Sistem kami memonitor aktivitas mencurigakan.", "icon": "FiShield" }
       ],
-      "imageSrc": "/images/mockup-cms.webp"
+      "imageSrc": "/images/mockup-1.webp"
     }
   ],
   "testimonials": [
     {
       "name": "Budi Santoso",
-      "role": "Pemilik, Warung Kopi Senja",
-      "message": "Sejak dibuatkan website oleh tim Sidoarjo Web Kreasi, penjualan kopi online kami meningkat 200%! Websitenya cepat dan mudah diakses pelanggan.",
-      "avatar": "/images/testimonial-umkm.webp"
+      "role": "Pemilik UKM di Sidoarjo",
+      "message": "Tim Sidoarjo Web Kreasi mengubah cara kami berbisnis. Website baru kami adalah aset paling berharga saat ini.",
+      "avatar": "/images/testimonial-1.webp"
     },
     {
       "name": "Rina Wijaya",
-      "role": "Direktur, PT. Maju Jaya",
-      "message": "Website perusahaan kami sekarang terlihat jauh lebih profesional dan modern. Proses kerjanya cepat dan timnya sangat responsif. Sangat direkomendasikan.",
-      "avatar": "/images/testimonial-perusahaan.webp"
+      "role": "Manajer Pemasaran",
+      "message": "Sebagai manajer, saya terkesan dengan keamanan dan integrasi yang mulus. Sulit menemukan layanan yang seimbang.",
+      "avatar": "/images/testimonial-2.webp"
     },
     {
       "name": "Andi Pratama",
-      "role": "Marketing Manager",
-      "message": "Berkat struktur SEO yang diterapkan, website kami sekarang berada di halaman pertama Google untuk kata kunci utama. Luar biasa!",
-      "avatar": "/images/testimonial-marketing.webp"
+      "role": "Product Manager",
+      "message": "Sidoarjo Web Kreasi merevolusi cara kami menjangkau pelanggan. Desain intuitif dan fitur hebatnya sangat penting.",
+      "avatar": "/images/testimonial-3.webp"
     }
   ],
   "faqs": [
     {
-      "question": "Berapa lama proses pembuatan website?",
-      "answer": "Tergantung paketnya. Paket UKM biasanya 1-2 minggu, Paket Bisnis 3-4 minggu, dan Paket Enterprise sesuai kompleksitas proyek. Kami akan memberikan estimasi waktu yang jelas di awal."
+      "question": "Apakah website saya akan aman?",
+      "answer": "Tentu saja. Kami menggunakan enkripsi SSL standar industri untuk melindungi data dan tidak menyimpan informasi login sensitif."
     },
     {
-      "question": "Apakah saya bisa mengupdate konten website sendiri?",
-      "answer": "Tentu saja! Sebagian besar website kami dilengkapi dengan Sistem Manajemen Konten (CMS) seperti WordPress yang memungkinkan Anda mengubah teks dan gambar dengan mudah."
+      "question": "Bisakah saya mengakses web di banyak perangkat?",
+      "answer": "Pasti! Website yang kami buat sepenuhnya responsif dan akan tampil sempurna di semua perangkat Anda - smartphone, tablet, dan komputer."
     },
-    { "question": "Apakah harga sudah termasuk domain dan hosting?", "answer": "Ya, untuk semua paket kami sudah memberikan gratis domain (.com, .co.id, dll) dan hosting berkualitas untuk tahun pertama." },
-    { "question": "Bagaimana dengan dukungan setelah website selesai?", "answer": "Kami menyediakan periode dukungan teknis gratis setelah website live untuk memastikan semuanya berjalan lancar. Kami juga menawarkan paket maintenance bulanan jika Anda memerlukannya." },
-    { "question": "Apakah bisa membuat fitur custom yang tidak ada di paket?", "answer": "Sangat bisa. Itulah keunggulan Paket Enterprise kami. Silakan diskusikan kebutuhan spesifik Anda dengan kami, dan kami akan memberikan solusi serta penawaran terbaik." }
+    { "question": "Bisakah saya menghubungkan media sosial saya?", "answer": "Ya! Kami dapat mengintegrasikan semua akun media sosial Anda ke dalam website untuk meningkatkan jangkauan." },
+    { "question": "Apakah saya butuh keahlian teknis?", "answer": "Tidak sama sekali! Kami menyediakan CMS yang mudah digunakan dan panduan agar Anda bisa mengelola konten website sendiri." },
+    { "question": "Bagaimana jika saya butuh bantuan?", "answer": "Tim dukungan kami siap sedia melalui email. Selain itu, kami juga menyediakan tutorial dan basis pengetahuan yang lengkap." }
   ],
   "ctaDetails": {
-    "heading": "Siap Membuat Bisnis Anda Go Digital?",
-    "subheading": "Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik untuk pembuatan website atau aplikasi yang sesuai dengan kebutuhan dan anggaran Anda.",
+    "heading": "Bergabung dengan Ratusan Klien Puas Kami",
+    "subheading": "Perjalanan digital Anda dimulai di sini. Hubungi kami hari ini untuk mengambil langkah pertama menuju masa depan bisnis yang lebih cerah.",
     "appStoreUrl": "#contact",
-    "googlePlayUrl": "https://wa.me/6285156779923"
+    "googlePlayUrl": "https://wa.me/6281234567890"
   },
   "footerDetails": {
-    "subheading": "Membantu UMKM & Perusahaan di Sidoarjo bertransformasi secara digital melalui website dan aplikasi berkualitas.",
+    "subheading": "Membantu bisnis di Sidoarjo bertransformasi secara digital melalui website dan aplikasi berkualitas.",
     "quickLinks": [
       { "text": "Layanan", "url": "#features" },
       { "text": "Harga", "url": "#pricing" },
@@ -140,7 +137,7 @@
     "telephone": "+62 812 3456 7890",
     "socials": {
       "twitter": "https://twitter.com/username",
-      "facebook": "https://facebook.com/bisnovo",
+      "facebook": "https://facebook.com/username",
       "linkedin": "https://www.linkedin.com/in/username",
       "instagram": "https://www.instagram.com/bisnovo"
     }
