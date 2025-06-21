@@ -1,0 +1,127 @@
+{
+  "siteDetails": {
+    "siteName": "Bisnovo",
+    "siteUrl": "https://bisnovo-template.vercel.app/",
+    "metadata": {
+      "title": "Bisnovo - Next.js and Tailwind CSS Landing Page Template",
+      "description": "Bisnovo empowers businesses with cutting-edge technology solutions to drive success and efficiency."
+    },
+    "language": "en-us",
+    "locale": "en-US",
+    "siteLogo": "/images/logo.png"
+  },
+  "menuItems": [
+    { "text": "Features", "url": "#features" },
+    { "text": "Pricing", "url": "#pricing" },
+    { "text": "Testimonials", "url": "#testimonials" }
+  ],
+  "heroDetails": {
+    "heading": "Smart, Secure, Simple Financial Management",
+    "subheading": "From effortless budgeting to real-time investment insights, Bisnovo puts you in control of your money like never before",
+    "centerImageSrc": "/images/hero-mockup.webp"
+  },
+  "tiers": [
+    {
+      "name": "Starter",
+      "price": 29,
+      "features": ["Basic cloud integration", "Up to 5 team members", "20GB storage", "Email support"]
+    },
+    {
+      "name": "Pro",
+      "price": 99,
+      "features": ["Advanced cloud integration", "Up to 20 team members", "100GB storage", "Priority email & phone support", "Advanced analytics"]
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "features": ["Full cloud integration", "Unlimited team members", "Unlimited storage", "24/7 dedicated support", "Custom solutions", "On-site training"]
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Smart Budgeting",
+      "description": "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+      "bullets": [
+        { "title": "Intelligent Categorization", "description": "Automatically sorts your transactions for crystal-clear insights.", "icon": "FiBarChart2" },
+        { "title": "Customizable Goals", "description": "Set and track financial objectives that matter to you.", "icon": "FiTarget" },
+        { "title": "Predictive Analysis", "description": "Get ahead of your finances with spending forecasts and alerts.", "icon": "FiTrendingUp" }
+      ],
+      "imageSrc": "/images/mockup-1.webp"
+    },
+    {
+      "title": "Seamless Investing",
+      "description": "Start building wealth today, no financial degree required. Bisnovo makes investing accessible and straightforward.",
+      "bullets": [
+        { "title": "Micro-Investing", "description": "Begin with as little as $1 and watch your money grow.", "icon": "FiDollarSign" },
+        { "title": "Expert Portfolios", "description": "Choose from investment strategies tailored to your risk tolerance.", "icon": "FiBriefcase" },
+        { "title": "Real-Time Performance", "description": "Track your investments with easy-to-understand metrics and visuals.", "icon": "FiPieChart" }
+      ],
+      "imageSrc": "/images/mockup-2.webp"
+    },
+    {
+      "title": "Bank-Grade Security",
+      "description": "Your financial data deserves the best protection. Rest easy knowing Bisnovo employs cutting-edge security measures.",
+      "bullets": [
+        { "title": "Military-Grade Encryption", "description": "Your information is safeguarded with the highest level of encryption.", "icon": "FiLock" },
+        { "title": "Biometric Authentication", "description": "Access your account securely with fingerprint or facial recognition.", "icon": "FiUser" },
+        { "title": "Real-Time Fraud Detection", "description": "Our system constantly monitors for suspicious activity to keep your money safe.", "icon": "FiShield" }
+      ],
+      "imageSrc": "/images/mockup-1.webp"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "John Smith",
+      "role": "CEO at Company",
+      "message": "Bisnovo's AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.",
+      "avatar": "/images/testimonial-1.webp"
+    },
+    {
+      "name": "Jane Doe",
+      "role": "CTO at Startup",
+      "message": "As a CTO, I'm impressed by Bisnovo's robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.",
+      "avatar": "/images/testimonial-2.webp"
+    },
+    {
+      "name": "Emily Johnson",
+      "role": "Product Manager",
+      "message": "Bisnovo is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.",
+      "avatar": "/images/testimonial-3.webp"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is Bisnovo secure?",
+      "answer": "Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security."
+    },
+    {
+      "question": "Can I use Bisnovo on multiple devices?",
+      "answer": "Absolutely! Your Bisnovo account syncs seamlessly across all your devices - smartphone, tablet, and computer."
+    },
+    { "question": "Can I connect all my bank accounts?", "answer": "Yes! Bisnovo supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts." },
+    { "question": "Do I need any financial expertise to use the investing features?", "answer": "Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level." },
+    { "question": "What if I need help using the app?", "answer": "Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Bisnovo." }
+  ],
+  "ctaDetails": {
+    "heading": "Join Over 1 Million Users To Transform Your Finances",
+    "subheading": "Your journey to financial freedom starts here. Download Bisnovo today and take the first step towards a brighter financial future!",
+    "appStoreUrl": "#",
+    "googlePlayUrl": "#"
+  },
+  "footerDetails": {
+    "subheading": "Empowering businesses with cutting-edge financial technology solutions.",
+    "quickLinks": [
+      { "text": "Features", "url": "#features" },
+      { "text": "Pricing", "url": "#pricing" },
+      { "text": "Testimonials", "url": "#testimonials" }
+    ],
+    "email": "address@yoursite.com",
+    "telephone": "+1 (123) 456-7890",
+    "socials": {
+      "twitter": "https://twitter.com/Twitter",
+      "facebook": "https://facebook.com",
+      "linkedin": "https://www.linkedin.com",
+      "instagram": "https://www.instagram.com"
+    }
+  }
+}
