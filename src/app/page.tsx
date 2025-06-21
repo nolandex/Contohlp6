@@ -1,3 +1,7 @@
+// /src/app/page.tsx
+
+"use client"; // <-- INI ADALAH REVISI UTAMA UNTUK MENGATASI ERROR
+
 import { clsx } from "clsx";
 import React, { useState } from 'react';
 import Image from 'next/image';
@@ -7,7 +11,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
-import { FaFingerprint } from 'react-icons/fa';
+import { FaFingerprint, FaBolt, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 
 import {
     benefits,
@@ -256,7 +260,7 @@ const Logos: React.FC = () => {
         <section id="logos" className="py-32 px-5 bg-background">
             <p className="text-lg font-medium text-center">Trusted by <span className="text-secondary">2000+</span> customers worldwide</p>
             <div className="mt-5 w-full flex flex-wrap flex-row items-center justify-evenly gap-5 sm:gap-10 opacity-45 logos-container">
-                {/* Vector logos here */}
+                {/* Vector logos can be placed here as SVG components */}
             </div>
         </section>
     );
@@ -495,7 +499,7 @@ const FAQ: React.FC = () => {
                     <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
                         Ask us anything!
                     </p>
-                    <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">help@finwise.com</a>
+                    <a href="mailto:help@finwise.com" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">help@finwise.com</a>
                 </div>
 
                 <div className="w-full lg:max-w-2xl mx-auto border-b">
@@ -586,17 +590,21 @@ const Footer: React.FC = () => {
                     {footerDetails.socials && (
                         <div className="mt-5 flex items-center gap-5 flex-wrap">
                             {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
+                                const platformUrl = (footerDetails.socials as { [key: string]: string })[platformName];
+                                if (platformName && platformUrl) {
                                     return (
                                         <Link
-                                            href={footerDetails.socials[platformName]}
+                                            href={platformUrl}
                                             key={platformName}
                                             aria-label={platformName}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                         >
                                             {getPlatformIconByName(platformName)}
                                         </Link>
                                     );
                                 }
+                                return null;
                             })}
                         </div>
                     )}
