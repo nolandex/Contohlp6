@@ -7,6 +7,13 @@ import { motion, type Variants } from "framer-motion"
 import { Transition } from "@headlessui/react"
 import { HiOutlineXMark, HiBars3 } from "react-icons/hi2"
 import { FaFingerprint } from "react-icons/fa"
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
+import { BiMinus, BiPlus } from "react-icons/bi"
+import { BsFillCheckCircleFill } from "react-icons/bs"
+
+import { benefitsConfig, pricingConfig, testimonialsConfig, faqConfig, statsConfig, footerConfig } from "@/config/data"
+import { getPlatformIconByName } from "@/utils"
+import type { IPricing } from "@/types"
 
 import { siteConfig, menuItems, heroConfig, ctaConfig } from "@/config/data"
 import type { IBenefit, IBenefitBullet } from "@/types"
@@ -491,3 +498,324 @@ const BenefitSection: React.FC<{
       opacity: 1,
       x: 0,
       transition: {
+        type: "spring",
+        bounce: 0.2,
+        duration: 1,
+      },
+    },
+  }
+
+  return (
+    <section className="benefit-section">
+      <motion.div
+        className="flex flex-wrap flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20 lg:flex-nowrap mb-24"
+        variants={containerVariants}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+      >
+        <div
+          className={clsx("flex flex-wrap items-center w-full max-w-lg", {
+            "justify-start": imageAtRight,
+            "lg:order-1 justify-end": !imageAtRight,
+          })}
+        >
+          <div className="w-full text-center lg:text-left ">
+            <motion.div className="flex flex-col w-full" variants={childVariants}>
+              <SectionTitle>
+                <h3 className="lg:max-w-2xl">{title}</h3>
+              </SectionTitle>
+
+              <p className="mt-1.5 mx-auto lg:ml-0 leading-normal text-foreground-accent">{description}</p>
+            </motion.div>
+
+            <div className="mx-auto lg:ml-0 w-full">
+              {bullets.map((item, index) => (
+                <BenefitBullet key={index} title={item.title} icon={item.icon} description={item.description} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className={clsx("mt-5 lg:mt-0", { "lg:order-2": imageAtRight })}>
+          <div className={clsx("w-fit flex", { "justify-start": imageAtRight, "justify-end": !imageAtRight })}>
+            <Image
+              src={imageSrc || "/placeholder.svg"}
+              alt="title"
+              width="384"
+              height="762"
+              quality={100}
+              className="lg:ml-0"
+            />
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  )
+}
+
+// Benefits Component
+export const Benefits: React.FC = () => {
+  return (
+    <div id="features">
+      <h2 className="sr-only">Features</h2>
+      {benefitsConfig.map((item, index) => {
+        return <BenefitSection key={index} benefit={item} imageAtRight={index % 2 !== 0} />
+      })}
+    </div>
+  )
+}
+
+// Pricing Column Component
+const PricingColumn: React.FC<{
+  tier: IPricing
+  highlight?: boolean
+}> = ({ tier, highlight }) => {
+  const { name, price, features } = tier
+
+  return (
+    <div
+      className={clsx("w-full max-w-sm mx-auto bg-white rounded-xl border border-gray-200 lg:max-w-full", {
+        "shadow-lg": highlight,
+      })}
+    >
+      <div className="p-6 border-b border-gray-200 rounded-t-xl">
+        <h3 className="text-2xl font-semibold mb-4">{name}</h3>
+        <p className="text-3xl md:text-5xl font-bold mb-6">
+          <span className={clsx({ "text-secondary": highlight })}>
+            {typeof price === "number" ? `$${price}` : price}
+          </span>
+          {typeof price === "number" && <span className="text-lg font-normal text-gray-600">/mo</span>}
+        </p>
+        <button
+          className={clsx("w-full py-3 px-4 rounded-full transition-colors", {
+            "bg-primary hover:bg-primary-accent": highlight,
+            "bg-hero-background hover:bg-gray-200": !highlight,
+          })}
+        >
+          Get Started
+        </button>
+      </div>
+      <div className="p-6 mt-1">
+        <p className="font-bold mb-0">FEATURES</p>
+        <p className="text-foreground-accent mb-5">Everything in basic, plus...</p>
+        <ul className="space-y-4 mb-8">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center">
+              <BsFillCheckCircleFill className="h-5 w-5 text-secondary mr-2" />
+              <span className="text-foreground-accent">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+// Pricing Component
+export const Pricing: React.FC = () => {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {pricingConfig.map((tier, index) => (
+        <PricingColumn key={tier.name} tier={tier} highlight={index === 1} />
+      ))}
+    </div>
+  )
+}
+
+// Testimonials Component
+export const Testimonials: React.FC = () => {
+  return (
+    <div className="grid gap-14 max-w-lg w-full mx-auto lg:gap-8 lg:grid-cols-3 lg:max-w-full">
+      {testimonialsConfig.map((testimonial, index) => (
+        <div key={index} className="">
+          <div className="flex items-center mb-4 w-full justify-center lg:justify-start">
+            <Image
+              src={testimonial.avatar || "/placeholder.svg"}
+              alt={`${testimonial.name} avatar`}
+              width={50}
+              height={50}
+              className="rounded-full shadow-md"
+            />
+            <div className="ml-4">
+              <h3 className="text-lg font-semibold text-secondary">{testimonial.name}</h3>
+              <p className="text-sm text-foreground-accent">{testimonial.role}</p>
+            </div>
+          </div>
+          <p className="text-foreground-accent text-center lg:text-left">&quot;{testimonial.message}&quot;</p>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// FAQ Component
+export const FAQ: React.FC = () => {
+  return (
+    <section id="faq" className="py-10 lg:py-20">
+      <div className="flex flex-col lg:flex-row gap-10">
+        <div className="">
+          <p className="hidden lg:block text-foreground-accent">FAQ&apos;S</p>
+          <SectionTitle>
+            <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Frequently Asked Questions</h2>
+          </SectionTitle>
+          <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">Ask us anything!</p>
+          <a
+            href="mailto:"
+            className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left"
+          >
+            help@finwise.com
+          </a>
+        </div>
+
+        <div className="w-full lg:max-w-2xl mx-auto border-b">
+          {faqConfig.map((faq, index) => (
+            <div key={index} className="mb-7">
+              <Disclosure>
+                {({ open }) => (
+                  <>
+                    <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-lg text-left border-t">
+                      <span className="text-2xl font-semibold">{faq.question}</span>
+                      {open ? (
+                        <BiMinus className="w-5 h-5 text-secondary" />
+                      ) : (
+                        <BiPlus className="w-5 h-5 text-secondary" />
+                      )}
+                    </DisclosureButton>
+                    <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">{faq.answer}</DisclosurePanel>
+                  </>
+                )}
+              </Disclosure>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Stats Component
+export const Stats: React.FC = () => {
+  return (
+    <section id="stats" className="py-10 lg:py-20">
+      <div className="grid sm:grid-cols-3 gap-8">
+        {statsConfig.map((stat) => (
+          <div key={stat.title} className="text-center sm:text-left max-w-md sm:max-w-full mx-auto">
+            <h3 className="mb-5 flex items-center gap-2 text-3xl font-semibold justify-center sm:justify-start">
+              {stat.icon}
+              {stat.title}
+            </h3>
+            <p className="text-foreground-accent">{stat.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+// CTA Component
+export const CTA: React.FC = () => {
+  return (
+    <section id="cta" className="mt-10 mb-5 lg:my-20">
+      <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
+        <div className="h-full w-full">
+          <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 h-full w-full bg-[#050a02] bg-[linear-gradient(to_right,#12170f_1px,transparent_1px),linear-gradient(to_bottom,#12170f_1px,transparent_1px)] bg-[size:6rem_4rem]">
+            <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#1C1C02,transparent)]"></div>
+          </div>
+
+          <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl">
+              {ctaConfig.heading}
+            </h2>
+
+            <p className="mx-auto max-w-xl md:px-5">{ctaConfig.subheading}</p>
+
+            <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
+              <AppStoreButton />
+              <PlayStoreButton />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// Footer Component
+export const Footer: React.FC = () => {
+  return (
+    <footer className="bg-hero-background text-foreground py-10">
+      <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <Link href="/" className="flex items-center gap-2">
+            <FaFingerprint className="min-w-fit w-5 h-5 md:w-7 md:h-7" />
+            <h3 className="manrope text-xl font-semibold cursor-pointer">{siteConfig.siteName}</h3>
+          </Link>
+          <p className="mt-3.5 text-foreground-accent">{footerConfig.subheading}</p>
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul className="text-foreground-accent">
+            {footerConfig.quickLinks.map((link) => (
+              <li key={link.text} className="mb-2">
+                <Link href={link.url} className="hover:text-foreground">
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+
+          {footerConfig.email && (
+            <a href={`mailto:${footerConfig.email}`} className="block text-foreground-accent hover:text-foreground">
+              Email: {footerConfig.email}
+            </a>
+          )}
+
+          {footerConfig.telephone && (
+            <a href={`tel:${footerConfig.telephone}`} className="block text-foreground-accent hover:text-foreground">
+              Phone: {footerConfig.telephone}
+            </a>
+          )}
+
+          {footerConfig.socials && (
+            <div className="mt-5 flex items-center gap-5 flex-wrap">
+              {Object.keys(footerConfig.socials).map((platformName) => {
+                if (platformName && footerConfig.socials[platformName]) {
+                  return (
+                    <Link href={footerConfig.socials[platformName]} key={platformName} aria-label={platformName}>
+                      {getPlatformIconByName(platformName)}
+                    </Link>
+                  )
+                }
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="mt-8 md:text-center text-foreground-accent px-6">
+        <p>
+          Copyright &copy; {new Date().getFullYear()} {siteConfig.siteName}. All rights reserved.
+        </p>
+        <p className="text-sm mt-2 text-gray-500">
+          Made with &hearts; by{" "}
+          <a href="https://nexilaunch.com" target="_blank" rel="noreferrer">
+            Nexi Launch
+          </a>
+        </p>
+        <p className="text-sm mt-2 text-gray-500">
+          UI kit by{" "}
+          <a
+            href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Youthmind
+          </a>
+        </p>
+      </div>
+    </footer>
+  )
+}
