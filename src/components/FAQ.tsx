@@ -1,42 +1,24 @@
-"use client"
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
-import { BiMinus, BiPlus } from "react-icons/bi";
+import data from '@/config/data.json';
 
-import SectionTitle from "./SectionTitle";
-import { faqs } from "@/data/faq";
+const FAQ = () => {
+    const { faqs, siteDetails } = data;
+    const siteName = siteDetails.siteName;
 
-const FAQ: React.FC = () => {
     return (
-        <section id="faq" className="py-10 lg:py-20">
-            <div className="flex flex-col lg:flex-row gap-10">
-                <div className="">
-                    <p className="hidden lg:block text-foreground-accent">FAQ&apos;S</p>
-                    <SectionTitle>
-                        <h2 className="my-3 !leading-snug lg:max-w-sm text-center lg:text-left">Frequently Asked Questions</h2>
-                    </SectionTitle>
-                    <p className="lg:mt-10 text-foreground-accent text-center lg:text-left">
-                        Ask us anything!
-                    </p>
-                    <a href="mailto:" className="mt-3 block text-xl lg:text-4xl text-secondary font-semibold hover:underline text-center lg:text-left">help@finwise.com</a>
-                </div>
-
-                <div className="w-full lg:max-w-2xl mx-auto border-b">
+        <section id="faq" className="py-20 bg-gray-50">
+            <div className="container mx-auto px-4 max-w-4xl">
+                <h2 className="text-3xl md:text-4xl font-bold text-center">Frequently Asked Questions</h2>
+                <div className="mt-10 space-y-4">
                     {faqs.map((faq, index) => (
-                        <div key={index} className="mb-7">
-                            <Disclosure>
-                                {({ open }) => (
-                                    <>
-                                        <DisclosureButton className="flex items-center justify-between w-full px-4 pt-7 text-lg text-left border-t">
-                                            <span className="text-2xl font-semibold">{faq.question}</span>
-                                            {open ? <BiMinus className="w-5 h-5 text-secondary" /> : <BiPlus className="w-5 h-5 text-secondary" />}
-                                        </DisclosureButton>
-                                        <DisclosurePanel className="px-4 pt-4 pb-2 text-foreground-accent">
-                                            {faq.answer}
-                                        </DisclosurePanel>
-                                    </>
-                                )}
-                            </Disclosure>
-                        </div>
+                        <details key={index} className="p-6 border rounded-lg bg-white shadow-sm cursor-pointer group">
+                            <summary className="font-semibold text-lg list-none flex justify-between items-center">
+                                {faq.question.replace(/\$\{siteDetails\.siteName\}/g, siteName)}
+                                <span className="ml-4 text-blue-500 transform transition-transform duration-200 group-open:rotate-45">+</span>
+                            </summary>
+                            <p className="mt-4 text-gray-600">
+                                {faq.answer.replace(/\$\{siteDetails\.siteName\}/g, siteName)}
+                            </p>
+                        </details>
                     ))}
                 </div>
             </div>
