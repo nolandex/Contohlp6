@@ -1,17 +1,21 @@
 // /src/app/page.tsx
 
-"use client"; // <-- INI ADALAH REVISI UTAMA UNTUK MENGATASI ERROR
+"use client";
 
 import { clsx } from "clsx";
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, Variants, Transition } from "framer-motion";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+// REVISI 1: 'Transition' dihapus dari import framer-motion
+import { motion, Variants } from "framer-motion";
+// REVISI 1: 'Transition' ditambahkan ke import @headlessui/react
+import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from "@headlessui/react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
-import { FaFingerprint, FaBolt, FaChartLine, FaShieldAlt } from 'react-icons/fa';
+import { FaFingerprint } from 'react-icons/fa';
+// REVISI 2: Import ikon yang tidak digunakan dihapus dari file ini
+// import { FaBolt, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 
 import {
     benefits,
@@ -28,8 +32,9 @@ import {
 import { IBenefit, IBenefitBullet, IPricing } from "@/types";
 import { getPlatformIconByName } from '@/utils';
 
-// Common Components
+// ... Sisa kode komponen dari sini ke bawah TIDAK ADA PERUBAHAN ...
 
+// Common Components
 interface ContainerProps {
     className?: string;
 }
@@ -39,6 +44,11 @@ const Container: React.FC<React.PropsWithChildren<ContainerProps>> = ({ children
         <div className={`px-5 w-full max-w-7xl mx-auto ${className ? className : ""}`}>{children}</div>
     );
 };
+
+// ... (tempel sisa kode yang sama persis seperti sebelumnya) ...
+// (Mulai dari 'SectionTitle' sampai akhir 'export default LandingPage;')
+// ... PASTE THE REST OF THE UNCHANGED CODE HERE ...
+// Common Components
 
 interface SectionTitleProps {
     children: React.ReactElement;
@@ -646,4 +656,3 @@ const LandingPage: React.FC = () => {
 };
 
 export default LandingPage;
-
