@@ -1,13 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
+import data from '@/config/data.json';
 
-import AppStoreButton from './AppStoreButton';
-import PlayStoreButton from './PlayStoreButton';
+const Hero = () => {
+  const { heroDetails } = data;
 
-import { heroDetails } from '@/data/hero';
+  // return ( ... kode JSX Anda yang sudah ada ... );
 
-const Hero: React.FC = () => {
-    return (
         <section
             id="hero"
             className="relative flex items-center justify-center pb-0 pt-32 md:pt-40 px-5"
