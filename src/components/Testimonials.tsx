@@ -1,33 +1,36 @@
-import React from 'react';
 import Image from 'next/image';
-import { testimonials } from '@/data/testimonials';
+import data from '@/config/data.json';
 
-const Testimonials: React.FC = () => {
-    return (
-        <div className="grid gap-14 max-w-lg w-full mx-auto lg:gap-8 lg:grid-cols-3 lg:max-w-full">
-            {testimonials.map((testimonial, index) => (
-                <div
-                    key={index}
-                    className=""
-                >
-                    <div className="flex items-center mb-4 w-full justify-center lg:justify-start">
-                        <Image
-                            src={testimonial.avatar}
-                            alt={`${testimonial.name} avatar`}
-                            width={50}
-                            height={50}
-                            className="rounded-full shadow-md"
-                        />
-                        <div className="ml-4">
-                            <h3 className="text-lg font-semibold text-secondary">{testimonial.name}</h3>
-                            <p className="text-sm text-foreground-accent">{testimonial.role}</p>
-                        </div>
-                    </div>
-                    <p className="text-foreground-accent text-center lg:text-left">&quot;{testimonial.message}&quot;</p>
-                </div>
-            ))}
+const Testimonials = () => {
+  const { testimonials, siteDetails } = data;
+  const siteName = siteDetails.siteName;
+
+  return (
+    <section id="testimonials" className="py-20">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold">What Our Users Say</h2>
+        <p className="text-gray-600 mt-2">Real stories from real customers.</p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.name} className="p-8 border rounded-lg shadow-lg bg-white">
+              <Image
+                src={testimonial.avatar}
+                alt={`Avatar of ${testimonial.name}`}
+                width={80}
+                height={80}
+                className="rounded-full mx-auto"
+              />
+              <p className="mt-6 italic text-gray-700">
+                "{testimonial.message.replace(/Bisnovo/g, siteName)}"
+              </p>
+              <p className="mt-4 font-bold text-lg">{testimonial.name}</p>
+              <p className="text-sm text-gray-500">{testimonial.role}</p>
+            </div>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Testimonials;
