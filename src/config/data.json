@@ -1,127 +1,148 @@
 {
   "siteDetails": {
-    "siteName": "Bisnovo",
-    "siteUrl": "https://bisnovo-template.vercel.app/",
+    "siteName": "Sidoarjo Web Kreasi",
+    "siteUrl": "https://website-anda.com/",
     "metadata": {
-      "title": "Bisnovo - Next.js and Tailwind CSS Landing Page Template",
-      "description": "Bisnovo empowers businesses with cutting-edge technology solutions to drive success and efficiency."
+      "title": "Jasa Pembuatan Website & Aplikasi Profesional di Sidoarjo",
+      "description": "Kami membantu UMKM dan Perusahaan di Sidoarjo untuk go digital dengan layanan pembuatan website dan aplikasi yang meningkatkan penjualan dan brand Anda."
     },
-    "language": "en-us",
-    "locale": "en-US",
+    "language": "id-id",
+    "locale": "id-ID",
     "siteLogo": "/images/logo.png"
   },
   "menuItems": [
-    { "text": "Features", "url": "#features" },
-    { "text": "Pricing", "url": "#pricing" },
-    { "text": "Testimonials", "url": "#testimonials" }
+    { "text": "Layanan", "url": "#features" },
+    { "text": "Harga", "url": "#pricing" },
+    { "text": "Testimoni", "url": "#testimonials" },
+    { "text": "FAQ", "url": "#faq" }
   ],
   "heroDetails": {
-    "heading": "Smart, Secure, Simple Financial Management",
-    "subheading": "From effortless budgeting to real-time investment insights, Bisnovo puts you in control of your money like never before",
-    "centerImageSrc": "/images/hero-mockup.webp"
+    "heading": "Bangun Kehadiran Digital Anda dengan Website Profesional",
+    "subheading": "Layanan pembuatan website dan aplikasi custom di Sidoarjo untuk UMKM dan Perusahaan. Desain modern, performa cepat, dan siap meningkatkan penjualan Anda.",
+    "centerImageSrc": "/images/hero-mockup-website.webp"
   },
   "tiers": [
     {
-      "name": "Starter",
-      "price": 29,
-      "features": ["Basic cloud integration", "Up to 5 team members", "20GB storage", "Email support"]
+      "name": "Paket UKM",
+      "price": "1.5 jt",
+      "features": [
+        "Desain dari Template Pilihan", 
+        "Hingga 5 Halaman", 
+        "SEO Dasar", 
+        "Gratis Domain & Hosting 1 Tahun", 
+        "Dukungan Email"
+      ]
     },
     {
-      "name": "Pro",
-      "price": 99,
-      "features": ["Advanced cloud integration", "Up to 20 team members", "100GB storage", "Priority email & phone support", "Advanced analytics"]
+      "name": "Paket Bisnis",
+      "price": "5 jt",
+      "features": [
+        "Desain Custom Profesional", 
+        "Hingga 15 Halaman", 
+        "Integrasi Media Sosial",
+        "SEO Lanjutan & Analitik",
+        "CMS (WordPress/Lainnya)",
+        "Dukungan Prioritas"
+      ]
     },
     {
-      "name": "Enterprise",
+      "name": "Paket Enterprise",
       "price": "Custom",
-      "features": ["Full cloud integration", "Unlimited team members", "Unlimited storage", "24/7 dedicated support", "Custom solutions", "On-site training"]
+      "features": [
+        "Desain & Fitur Sesuai Kebutuhan", 
+        "Halaman Tidak Terbatas", 
+        "Pengembangan Aplikasi Web/Mobile", 
+        "Integrasi Sistem/API",
+        "Dukungan 24/7 & Maintenance",
+        "Pelatihan Penggunaan"
+      ]
     }
   ],
   "benefits": [
     {
-      "title": "Smart Budgeting",
-      "description": "Take the guesswork out of managing your money. Our AI-powered budgeting tool adapts to your lifestyle and helps you stay on track.",
+      "title": "Desain Modern & Responsif",
+      "description": "Setiap website yang kami buat memiliki tampilan modern dan berfungsi sempurna di semua perangkat, dari desktop hingga smartphone, untuk menjangkau semua pelanggan Anda.",
       "bullets": [
-        { "title": "Intelligent Categorization", "description": "Automatically sorts your transactions for crystal-clear insights.", "icon": "FiBarChart2" },
-        { "title": "Customizable Goals", "description": "Set and track financial objectives that matter to you.", "icon": "FiTarget" },
-        { "title": "Predictive Analysis", "description": "Get ahead of your finances with spending forecasts and alerts.", "icon": "FiTrendingUp" }
+        { "title": "Tampilan Profesional", "description": "Meningkatkan citra dan kepercayaan brand Anda.", "icon": "FiLayout" },
+        { "title": "Mobile-Friendly", "description": "Pengalaman pengguna yang optimal di perangkat seluler.", "icon": "FiSmartphone" },
+        { "title": "Navigasi Intuitif", "description": "Pengunjung mudah menemukan informasi yang mereka cari.", "icon": "FiCompass" }
       ],
-      "imageSrc": "/images/mockup-1.webp"
+      "imageSrc": "/images/mockup-responsive.webp"
     },
     {
-      "title": "Seamless Investing",
-      "description": "Start building wealth today, no financial degree required. Bisnovo makes investing accessible and straightforward.",
+      "title": "Performa Cepat & SEO-Friendly",
+      "description": "Kami membangun website dengan teknologi terkini untuk memastikan waktu muat yang cepat dan struktur yang disukai mesin pencari seperti Google.",
       "bullets": [
-        { "title": "Micro-Investing", "description": "Begin with as little as $1 and watch your money grow.", "icon": "FiDollarSign" },
-        { "title": "Expert Portfolios", "description": "Choose from investment strategies tailored to your risk tolerance.", "icon": "FiBriefcase" },
-        { "title": "Real-Time Performance", "description": "Track your investments with easy-to-understand metrics and visuals.", "icon": "FiPieChart" }
+        { "title": "Loading Cepat", "description": "Mengurangi rasio pentalan dan disukai pengunjung.", "icon": "FiZap" },
+        { "title": "Struktur SEO", "description": "Membantu website Anda mudah ditemukan di Google.", "icon": "FiSearch" },
+        { "title": "Kode Bersih", "description": "Fondasi yang kuat untuk skalabilitas dan maintenance.", "icon": "FiCode" }
       ],
-      "imageSrc": "/images/mockup-2.webp"
+      "imageSrc": "/images/mockup-performance.webp"
     },
     {
-      "title": "Bank-Grade Security",
-      "description": "Your financial data deserves the best protection. Rest easy knowing Bisnovo employs cutting-edge security measures.",
+      "title": "Mudah Dikelola & Dukungan Penuh",
+      "description": "Anda mendapatkan kontrol penuh atas konten website Anda melalui CMS yang mudah digunakan, dengan dukungan teknis dari tim kami.",
       "bullets": [
-        { "title": "Military-Grade Encryption", "description": "Your information is safeguarded with the highest level of encryption.", "icon": "FiLock" },
-        { "title": "Biometric Authentication", "description": "Access your account securely with fingerprint or facial recognition.", "icon": "FiUser" },
-        { "title": "Real-Time Fraud Detection", "description": "Our system constantly monitors for suspicious activity to keep your money safe.", "icon": "FiShield" }
+        { "title": "CMS User-Friendly", "description": "Update konten, gambar, dan berita secara mandiri.", "icon": "FiEdit3" },
+        { "title": "Dukungan Teknis", "description": "Kami siap membantu jika Anda mengalami kendala teknis.", "icon": "FiHelpCircle" },
+        { "title": "Pelatihan Penggunaan", "description": "Panduan lengkap agar Anda mahir mengelola website.", "icon": "FiBookOpen" }
       ],
-      "imageSrc": "/images/mockup-1.webp"
+      "imageSrc": "/images/mockup-cms.webp"
     }
   ],
   "testimonials": [
     {
-      "name": "John Smith",
-      "role": "CEO at Company",
-      "message": "Bisnovo's AI-driven insights have transformed how we approach financial planning for our clients. It's an invaluable resource in the modern financial landscape.",
-      "avatar": "/images/testimonial-1.webp"
+      "name": "Budi Santoso",
+      "role": "Pemilik, Warung Kopi Senja",
+      "message": "Sejak dibuatkan website oleh tim Sidoarjo Web Kreasi, penjualan kopi online kami meningkat 200%! Websitenya cepat dan mudah diakses pelanggan.",
+      "avatar": "/images/testimonial-umkm.webp"
     },
     {
-      "name": "Jane Doe",
-      "role": "CTO at Startup",
-      "message": "As a CTO, I'm impressed by Bisnovo's robust security measures and seamless integrations. It's rare to find an app that balances user-friendliness with such advanced technology.",
-      "avatar": "/images/testimonial-2.webp"
+      "name": "Rina Wijaya",
+      "role": "Direktur, PT. Maju Jaya",
+      "message": "Website perusahaan kami sekarang terlihat jauh lebih profesional dan modern. Proses kerjanya cepat dan timnya sangat responsif. Sangat direkomendasikan.",
+      "avatar": "/images/testimonial-perusahaan.webp"
     },
     {
-      "name": "Emily Johnson",
-      "role": "Product Manager",
-      "message": "Bisnovo is revolutionizing personal finance management. Its intuitive design and powerful features make it an indispensable tool for anyone serious about financial growth.",
-      "avatar": "/images/testimonial-3.webp"
+      "name": "Andi Pratama",
+      "role": "Marketing Manager",
+      "message": "Berkat struktur SEO yang diterapkan, website kami sekarang berada di halaman pertama Google untuk kata kunci utama. Luar biasa!",
+      "avatar": "/images/testimonial-marketing.webp"
     }
   ],
   "faqs": [
     {
-      "question": "Is Bisnovo secure?",
-      "answer": "Absolutely. We use bank-level encryption to protect your data and never store your login information. Plus, our biometric authentication adds an extra layer of security."
+      "question": "Berapa lama proses pembuatan website?",
+      "answer": "Tergantung paketnya. Paket UKM biasanya 1-2 minggu, Paket Bisnis 3-4 minggu, dan Paket Enterprise sesuai kompleksitas proyek. Kami akan memberikan estimasi waktu yang jelas di awal."
     },
     {
-      "question": "Can I use Bisnovo on multiple devices?",
-      "answer": "Absolutely! Your Bisnovo account syncs seamlessly across all your devices - smartphone, tablet, and computer."
+      "question": "Apakah saya bisa mengupdate konten website sendiri?",
+      "answer": "Tentu saja! Sebagian besar website kami dilengkapi dengan Sistem Manajemen Konten (CMS) seperti WordPress yang memungkinkan Anda mengubah teks dan gambar dengan mudah."
     },
-    { "question": "Can I connect all my bank accounts?", "answer": "Yes! Bisnovo supports connections with over 10,000 financial institutions worldwide. Simply log in through our secure portal to link your accounts." },
-    { "question": "Do I need any financial expertise to use the investing features?", "answer": "Not at all! Our expert-curated portfolios and educational resources make investing accessible to everyone, regardless of experience level." },
-    { "question": "What if I need help using the app?", "answer": "Our dedicated support team is available 24/7 via chat or email. Plus, we offer extensive in-app tutorials and a comprehensive knowledge base to help you make the most of Bisnovo." }
+    { "question": "Apakah harga sudah termasuk domain dan hosting?", "answer": "Ya, untuk semua paket kami sudah memberikan gratis domain (.com, .co.id, dll) dan hosting berkualitas untuk tahun pertama." },
+    { "question": "Bagaimana dengan dukungan setelah website selesai?", "answer": "Kami menyediakan periode dukungan teknis gratis setelah website live untuk memastikan semuanya berjalan lancar. Kami juga menawarkan paket maintenance bulanan jika Anda memerlukannya." },
+    { "question": "Apakah bisa membuat fitur custom yang tidak ada di paket?", "answer": "Sangat bisa. Itulah keunggulan Paket Enterprise kami. Silakan diskusikan kebutuhan spesifik Anda dengan kami, dan kami akan memberikan solusi serta penawaran terbaik." }
   ],
   "ctaDetails": {
-    "heading": "Join Over 1 Million Users To Transform Your Finances",
-    "subheading": "Your journey to financial freedom starts here. Download Bisnovo today and take the first step towards a brighter financial future!",
-    "appStoreUrl": "#",
-    "googlePlayUrl": "#"
+    "heading": "Siap Membuat Bisnis Anda Go Digital?",
+    "subheading": "Hubungi kami sekarang untuk konsultasi gratis dan dapatkan penawaran terbaik untuk pembuatan website atau aplikasi yang sesuai dengan kebutuhan dan anggaran Anda.",
+    "appStoreUrl": "#contact",
+    "googlePlayUrl": "https://wa.me/6285156779923"
   },
   "footerDetails": {
-    "subheading": "Empowering businesses with cutting-edge financial technology solutions.",
+    "subheading": "Membantu UMKM & Perusahaan di Sidoarjo bertransformasi secara digital melalui website dan aplikasi berkualitas.",
     "quickLinks": [
-      { "text": "Features", "url": "#features" },
-      { "text": "Pricing", "url": "#pricing" },
-      { "text": "Testimonials", "url": "#testimonials" }
+      { "text": "Layanan", "url": "#features" },
+      { "text": "Harga", "url": "#pricing" },
+      { "text": "Testimoni", "url": "#testimonials" }
     ],
-    "email": "address@yoursite.com",
-    "telephone": "+1 (123) 456-7890",
+    "email": "info@domainanda.com",
+    "telephone": "+62 812 3456 7890",
     "socials": {
-      "twitter": "https://twitter.com/Twitter",
-      "facebook": "https://facebook.com",
-      "linkedin": "https://www.linkedin.com",
-      "instagram": "https://www.instagram.com"
+      "twitter": "https://twitter.com/username",
+      "facebook": "https://facebook.com/bisnovo",
+      "linkedin": "https://www.linkedin.com/in/username",
+      "instagram": "https://www.instagram.com/bisnovo"
     }
   }
 }
