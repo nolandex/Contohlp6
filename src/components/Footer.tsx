@@ -1,69 +1,35 @@
 import Link from 'next/link';
-import React from 'react';
-import { FaFingerprint } from 'react-icons/fa';
+import data from '@/config/data.json';
+import { FaTwitter, FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
-import { siteDetails } from '@/data/siteDetails';
-import { footerDetails } from '@/data/footer';
-import { getPlatformIconByName } from '@/utils';
+const Footer = () => {
+  const { footerDetails, siteDetails } = data;
 
-const Footer: React.FC = () => {
-    return (
-        <footer className="bg-hero-background text-foreground py-10">
-            <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div>
-                    <Link href="/" className="flex items-center gap-2">
-                        <FaFingerprint className="min-w-fit w-5 h-5 md:w-7 md:h-7" />
-                        <h3 className="manrope text-xl font-semibold cursor-pointer">
-                            {siteDetails.siteName}
-                        </h3>
-                    </Link>
-                    <p className="mt-3.5 text-foreground-accent">
-                        {footerDetails.subheading}
-                    </p>
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul className="text-foreground-accent">
-                        {footerDetails.quickLinks.map(link => (
-                            <li key={link.text} className="mb-2">
-                                <Link href={link.url} className="hover:text-foreground">{link.text}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-
-                    {footerDetails.email && <a href={`mailto:${footerDetails.email}`}  className="block text-foreground-accent hover:text-foreground">Email: {footerDetails.email}</a>}
-
-                    {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
-
-                    {footerDetails.socials && (
-                        <div className="mt-5 flex items-center gap-5 flex-wrap">
-                            {Object.keys(footerDetails.socials).map(platformName => {
-                                if (platformName && footerDetails.socials[platformName]) {
-                                    return (
-                                        <Link
-                                            href={footerDetails.socials[platformName]}
-                                            key={platformName}
-                                            aria-label={platformName}
-                                        >
-                                            {getPlatformIconByName(platformName)}
-                                        </Link>
-                                    )
-                                }
-                            })}
-                        </div>
-                    )}
-                </div>
-            </div>
-            <div className="mt-8 md:text-center text-foreground-accent px-6">
-                <p>Copyright &copy; {new Date().getFullYear()} {siteDetails.siteName}. All rights reserved.</p>
-                <p className="text-sm mt-2 text-gray-500">Made with &hearts; by <a href="https://nexilaunch.com" target="_blank">Nexi Launch</a></p>
-                <p className="text-sm mt-2 text-gray-500">UI kit by <a href="https://ui8.net/youthmind/products/fintech-finance-mobile-app-ui-kit" target="_blank">Youthmind</a></p>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="bg-gray-800 text-white py-12">
+      <div className="container mx-auto px-4 text-center">
+        <h3 className="text-2xl font-bold">{siteDetails.siteName}</h3>
+        <p className="mt-2 max-w-md mx-auto text-gray-400">{footerDetails.subheading}</p>
+        <div className="mt-6 flex justify-center gap-6">
+          {footerDetails.quickLinks.map((link) => (
+            <Link key={link.text} href={link.url}>
+              <a className="hover:text-blue-400 transition-colors">{link.text}</a>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-6 flex justify-center gap-6">
+          <a href={footerDetails.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400"><FaTwitter /></a>
+          <a href={footerDetails.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400"><FaFacebook /></a>
+          <a href={footerDetails.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400"><FaLinkedin /></a>
+          <a href={footerDetails.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400"><FaInstagram /></a>
+        </div>
+        <div className="mt-8 border-t border-gray-700 pt-8 text-gray-500">
+          <p>&copy; {new Date().getFullYear()} {siteDetails.siteName}. All Rights Reserved.</p>
+          <p className="mt-2">Email: {footerDetails.email} | Tel: {footerDetails.telephone}</p>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
