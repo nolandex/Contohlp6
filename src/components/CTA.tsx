@@ -1,31 +1,29 @@
-import { ctaDetails } from "@/data/cta"
+import Link from 'next/link';
+import data from '@/config/data.json';
 
-import AppStoreButton from "./AppStoreButton"
-import PlayStoreButton from "./PlayStoreButton"
+const CTA = () => {
+    const { ctaDetails } = data;
 
-const CTA: React.FC = () => {
     return (
-        <section id="cta" className="mt-10 mb-5 lg:my-20">
-            <div className="relative h-full w-full z-10 mx-auto py-12 sm:py-20">
-                <div className="h-full w-full">
-                    <div className="rounded-3xl opacity-95 absolute inset-0 -z-10 h-full w-full bg-[#050a02] bg-[linear-gradient(to_right,#12170f_1px,transparent_1px),linear-gradient(to_bottom,#12170f_1px,transparent_1px)] bg-[size:6rem_4rem]">
-                        <div className="rounded-3xl absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_600px_at_50%_500px,#1C1C02,transparent)]"></div>
-                    </div>
-
-                    <div className="h-full flex flex-col items-center justify-center text-white text-center px-5">
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-tight font-semibold mb-4 max-w-2xl">{ctaDetails.heading}</h2>
-
-                        <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
-
-                        <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
-                        </div>
-                    </div>
+        <section id="cta" className="py-20 bg-blue-600 text-white">
+            <div className="container mx-auto px-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold">{ctaDetails.heading}</h2>
+                <p className="mt-4 max-w-2xl mx-auto">{ctaDetails.subheading}</p>
+                <div className="mt-8 flex justify-center gap-4">
+                    <Link href={ctaDetails.appStoreUrl}>
+                        <a className="bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                            Download on the App Store
+                        </a>
+                    </Link>
+                    <Link href={ctaDetails.googlePlayUrl}>
+                        <a className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+                            Get it on Google Play
+                        </a>
+                    </Link>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default CTA
+export default CTA;
